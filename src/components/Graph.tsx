@@ -8,7 +8,9 @@ import { SelectedCountryContext, CSelectedCountryContext } from "./Covid"
 
 const useStyles = makeStyles((theme) => ({
     controller: {
-        padding: theme.spacing(2)
+        paddingTop: theme.spacing(2),
+        paddingLeft: theme.spacing(2),
+        paddingRight: theme.spacing(2)
     },
     card: {
         padding: theme.spacing(1)

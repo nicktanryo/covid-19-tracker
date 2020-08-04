@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         height: "100%"
     },
     container: {
-        maxHeight: "50vh"
+        maxHeight: "55vh"
     },
     table: {
         minWidth: 100
