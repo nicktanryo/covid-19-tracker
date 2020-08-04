@@ -3,19 +3,13 @@ import "./App.css"
 import Covid from './components/Covid'
 
 import "leaflet/dist/leaflet.css"
-import { createMuiTheme, ThemeProvider, Paper, makeStyles } from '@material-ui/core'
+import { createMuiTheme, ThemeProvider, Paper } from '@material-ui/core'
 
 export const DarkThemeContext = React.createContext<boolean>(false)
 export const SetDarkThemeContext = React.createContext<React.Dispatch<SetStateAction<boolean>> | undefined>(undefined)
 
-const useStyles = makeStyles(() => ({
-    app: {
-        height: "100vh"
-    }
-}))
 
 export default function App(): ReactElement {
-    const classes = useStyles()
     const [darkTheme, setDarkTheme] = useState<boolean>(false)
     const theme = createMuiTheme({
         palette: {

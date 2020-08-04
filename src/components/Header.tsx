@@ -2,7 +2,7 @@ import React, { ReactElement, useContext, useEffect, useState, SetStateAction } 
 
 import GpsFixedRoundedIcon from '@material-ui/icons/GpsFixedRounded';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
-import { AppBar, Toolbar, Grid, Typography, FormControl, Select, MenuItem, makeStyles, Button, Paper } from '@material-ui/core';
+import { AppBar, Toolbar, Grid, Typography, FormControl, Select, MenuItem, makeStyles, Button } from '@material-ui/core';
 
 import { DarkThemeContext, SetDarkThemeContext } from "../App"
 import { SelectedCountryContext, CSelectedCountryContext } from "./Covid"
@@ -23,11 +23,10 @@ export default function Header(): ReactElement {
             marginLeft: theme.spacing(1)
         },
         button: {
-            marginLeft: theme.spacing(3)
+            marginLeft: theme.spacing(1)
         },
         title: {
-            height: "100%",
-            color: "black"
+            height: "100%"
         },
         select: {
             maxHeight: "100px",
@@ -63,11 +62,11 @@ export default function Header(): ReactElement {
                     </Grid>
 
                     <Grid item>
-                        <FormControl size="small" className={classes.select}>
+                        <FormControl size="small">
                             <Select
-                                variant="standard"
+                                variant="outlined"
                                 value={SelectedCountries?.selectedCountry}
-                                color="primary"
+                                color={DarkTheme ? "secondary" : "primary"}
                                 className={classes.select}
                                 onChange={(event) => SelectedCountries?.setSelectedCountry(event.target.value as String)}
                             >
@@ -82,7 +81,7 @@ export default function Header(): ReactElement {
                             </Select>
                         </FormControl>
 
-                        <Button size="small" variant="contained" color={DarkTheme ? "secondary" : "default"} className={classes.button} onClick={() => SetDarkTheme && SetDarkTheme(prev => !prev)} >
+                        <Button variant="contained" color={DarkTheme ? "secondary" : "default"} className={classes.button} onClick={() => SetDarkTheme && SetDarkTheme(prev => !prev)} >
                             {DarkTheme ? "LIGHT" : "DARK"} <Brightness4Icon className={classes.svg} />
                         </Button>
                     </Grid>
