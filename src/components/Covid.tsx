@@ -7,6 +7,7 @@ import InfoBar from './InfoBar'
 import Map from './Map'
 import Table from './Table'
 import Graph from './Graph'
+import Copyright from './Copyright'
 
 export interface CSelectedCountryContext {
     selectedCountry: String
@@ -105,6 +106,9 @@ export default function Covid(): ReactElement {
                             </Grid>
                         </Grid>
 
+                    </Grid>
+                    <Grid style={{ margin: "25px auto 25px auto" }}>
+                        <Copyright />
                     </Grid>
                 </ViewTypeContext.Provider>
             </SelectedCountryContext.Provider>
