@@ -139,7 +139,7 @@ export default function Covid(): ReactElement {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid style={{ margin: "25px auto 25px auto" }}>
+                <Grid style={{ margin: "25px auto auto auto" }}>
                     <Copyright />
                 </Grid>
             </ViewTypeContext.Provider>
