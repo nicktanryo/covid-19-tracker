@@ -95,7 +95,7 @@ export default function Covid(): ReactElement {
                             <Header />
                         </Grid>
 
-                        <Grid item>
+                        <Grid item style={{flex:1}}>
                             <Map coordinate={coordinate} />
                         </Grid>
 
@@ -122,7 +122,7 @@ export default function Covid(): ReactElement {
                         direction="column"
                         justify="space-between"
                     >
-                        <Grid item>
+                        <Grid item style={{flex: 1}}>
                             {" "}
                             {/*/xs={12}*/}
                             <Table />

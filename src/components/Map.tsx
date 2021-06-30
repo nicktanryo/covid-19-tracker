@@ -52,7 +52,7 @@ export default function Map({ coordinate }: Props): ReactElement {
     }, [])
 
     return (
-        <Paper className={"map"} elevation={8}>
+        <Paper className={"map"} elevation={8} style={{height: "700px"}}>
             <LeafletMap center={coordinate} zoom={SelectedCountry?.selectedCountry === "WORLDWIDE" ? 2 : 5} className="leaflet-container" minZoom={1}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
