@@ -2,7 +2,7 @@ import React, { ReactElement, useState, useEffect, useContext } from 'react'
 
 import { Paper, makeStyles, Card, CardMedia, CardContent } from '@material-ui/core'
 
-import { Map as LeafletMap, TileLayer, Popup, Circle } from "react-leaflet"
+import { MapContainer as LeafletMap, TileLayer, Popup, Circle } from "react-leaflet"
 import 'leaflet/dist/leaflet.css';
 
 import countries, { MapData } from "../services/service"

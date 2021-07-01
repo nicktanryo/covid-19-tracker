@@ -110,6 +110,7 @@ export default function Graph(): ReactElement {
                 LOCATION : {title}
                 {graphData && (
                     <Line
+                        type="bar"
                         data={graphData}
                         options={option}
                     />

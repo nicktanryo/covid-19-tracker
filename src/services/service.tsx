@@ -4,7 +4,7 @@ const URL = "https://disease.sh/v3/covid-19"
 
 let countries: Array<FullResponseData> | undefined = undefined
 
-export default {
+const service = {
     getAllData: async (): Promise<boolean> => {
         const { data } = await axios.get(`${URL}/countries`)
         countries = data
@@ -50,6 +50,8 @@ export default {
         }))
     }
 }
+
+export default service;
 
 export interface TimelineData {
     country: String
